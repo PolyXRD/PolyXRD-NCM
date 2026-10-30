@@ -1,0 +1,200 @@
+[
+  {
+    "file": "positive/ncm/ncm811_real.txt",
+    "category": "ncm",
+    "origin": "real",
+    "source": "XRData/csuHJW/txt/Data040：NCM：811_raw.txt",
+    "note": "真实 NCM811 实样",
+    "expect_ok": true,
+    "expect_kind": "ncm"
+  },
+  {
+    "file": "negative/spinel/alcoo_650c_real.txt",
+    "category": "spinel",
+    "origin": "real",
+    "source": "XRData/csuHJW/data005：AlCoO-650C.txt",
+    "note": "AlCoO₂ 尖晶石",
+    "expect_ok": false,
+    "expect_kind": "other"
+  },
+  {
+    "file": "negative/spinel/alcoo_750c_real.txt",
+    "category": "spinel",
+    "origin": "real",
+    "source": "XRData/csuHJW/data004：AlCoO-750C.txt",
+    "note": "AlCoO₂ 尖晶石",
+    "expect_ok": false,
+    "expect_kind": "other"
+  },
+  {
+    "file": "negative/spinel/magnetite_iucr.txt",
+    "category": "spinel",
+    "origin": "real",
+    "source": "XRData/IUCr/MAGNETIT.RAW",
+    "note": "Fe₃O₄ 尖晶石",
+    "expect_ok": false,
+    "expect_kind": "other"
+  },
+  {
+    "file": "negative/lfp/lifepo4_smz.txt",
+    "category": "lfp",
+    "origin": "real",
+    "source": "XRData/smz geshi/LiFePO4#01##20250520-100220_100.txt",
+    "note": "LiFePO₄ 橄榄石 Pnma",
+    "expect_ok": false,
+    "expect_kind": "other"
+  },
+  {
+    "file": "negative/lfp/fepo4_smz.txt",
+    "category": "lfp",
+    "origin": "real",
+    "source": "XRData/smz geshi/FePO4#01##20250520-132913_100.txt",
+    "note": "FePO₄ 橄榄石型",
+    "expect_ok": false,
+    "expect_kind": "other"
+  },
+  {
+    "file": "negative/rocksalt/fluorite_iucr.txt",
+    "category": "rocksalt",
+    "origin": "real",
+    "source": "XRData/IUCr/FLUORITE.RAW",
+    "note": "CaF₂，Fm-3m 岩盐型",
+    "expect_ok": false,
+    "expect_kind": "other"
+  },
+  {
+    "file": "negative/precursor/ni_oh2_csu.txt",
+    "category": "precursor",
+    "origin": "real",
+    "source": "XRData/csuHJW/Data043/Data043：Ni(OH)2.txt",
+    "note": "真实 β-Ni(OH)₂（a≈2.68 Å）；池内 COD 1548811 为另一多型（a=3.127 Å），故分流为 other —— 前驱体分流依赖 CIF 多型匹配，是已知局限",
+    "expect_ok": false,
+    "expect_kind": "other"
+  },
+  {
+    "file": "negative/other/anatase_csu.txt",
+    "category": "other",
+    "origin": "real",
+    "source": "XRData/csuHJW/txt/Data033：单相锐钛矿.txt",
+    "note": "单相锐钛矿",
+    "expect_ok": false,
+    "expect_kind": "other"
+  },
+  {
+    "file": "negative/other/y2o3_csu.txt",
+    "category": "other",
+    "origin": "real",
+    "source": "XRData/csuHJW/txt/Data038：Y2O3.txt",
+    "note": "Y₂O₃ 方铍石型（立方）",
+    "expect_ok": false,
+    "expect_kind": "other"
+  },
+  {
+    "file": "negative/other/zno_caco3_csu.txt",
+    "category": "other",
+    "origin": "real",
+    "source": "XRData/csuHJW/Data041/Data041：ZnO+CaCO3.txt",
+    "note": "ZnO + CaCO₃（CaCO₃ 为 R-3c）",
+    "expect_ok": false,
+    "expect_kind": "other"
+  },
+  {
+    "file": "negative/other/limno2_si_csu.txt",
+    "category": "other",
+    "origin": "real",
+    "source": "XRData/csuHJW/txt/Data030：LiMnO2+Si.txt",
+    "note": "正交 LiMnO₂ + Si",
+    "expect_ok": false,
+    "expect_kind": "other"
+  },
+  {
+    "file": "negative/other/zrb_zrb2_csu.txt",
+    "category": "other",
+    "origin": "real",
+    "source": "XRData/csuHJW/txt/Data031：ZrB-ZrB2.txt",
+    "note": "六方硼化物",
+    "expect_ok": false,
+    "expect_kind": "other"
+  },
+  {
+    "file": "positive/ncm/ncm111_syn.txt",
+    "category": "ncm",
+    "origin": "synthetic",
+    "source": "内置 CIF COD 3000558 合成",
+    "note": "内置 CIF COD 3000558 合成",
+    "expect_ok": true,
+    "expect_kind": "ncm"
+  },
+  {
+    "file": "positive/ncm/ncm523_syn.txt",
+    "category": "ncm",
+    "origin": "synthetic",
+    "source": "内置派生 CIF 合成",
+    "note": "内置派生 CIF 合成",
+    "expect_ok": true,
+    "expect_kind": "ncm"
+  },
+  {
+    "file": "positive/ncm/ncm622_syn.txt",
+    "category": "ncm",
+    "origin": "synthetic",
+    "source": "内置派生 CIF 合成",
+    "note": "内置派生 CIF 合成",
+    "expect_ok": true,
+    "expect_kind": "ncm"
+  },
+  {
+    "file": "positive/ncm/linio2_syn.txt",
+    "category": "ncm",
+    "origin": "synthetic",
+    "source": "内置 CIF COD 1533770 合成（含 0.05% 应变）",
+    "note": "内置 CIF COD 1533770 合成（含 0.05% 应变）",
+    "expect_ok": true,
+    "expect_kind": "ncm"
+  },
+  {
+    "file": "negative/lco/lco_d120nm_syn.txt",
+    "category": "lco",
+    "origin": "synthetic",
+    "source": "内置 CIF COD 1533825 合成",
+    "note": "内置 CIF COD 1533825 合成",
+    "expect_ok": false,
+    "expect_kind": "ncm"
+  },
+  {
+    "file": "negative/lco/lco_d200nm_syn.txt",
+    "category": "lco",
+    "origin": "synthetic",
+    "source": "内置 CIF COD 1533825 合成",
+    "note": "内置 CIF COD 1533825 合成",
+    "expect_ok": false,
+    "expect_kind": "ncm"
+  },
+  {
+    "file": "negative/rocksalt/nio_d80nm_syn.txt",
+    "category": "rocksalt",
+    "origin": "synthetic",
+    "source": "岩盐 NiO (Fm-3m, a=4.177) 合成",
+    "note": "岩盐 NiO (Fm-3m, a=4.177) 合成",
+    "expect_ok": false,
+    "expect_kind": "other"
+  },
+  {
+    "file": "negative/precursor/nico3_d150nm_syn.txt",
+    "category": "precursor",
+    "origin": "synthetic",
+    "source": "内置 CIF COD 1548823 合成（R-3c 碳酸盐）",
+    "note": "内置 CIF COD 1548823 合成（R-3c 碳酸盐）",
+    "expect_ok": false,
+    "expect_kind": "precursor_carbonate"
+  },
+  {
+    "file": "negative/precursor/nih2_d150nm_syn.txt",
+    "category": "precursor",
+    "origin": "synthetic",
+    "source": "内置 CIF COD 1548811 合成（P-3m1 氢氧化物）",
+    "note": "内置 CIF COD 1548811 合成（P-3m1 氢氧化物）",
+    "expect_ok": false,
+    "expect_kind": "precursor_hydroxide"
+  }
+]

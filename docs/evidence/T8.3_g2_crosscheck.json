@@ -1,0 +1,70 @@
+{
+ "generated": "2026-10-30T13:52:55+00:00",
+ "sample": "D:\\Project\\XRD\\XRData\\csuHJW\\txt\\Data040：NCM：811_raw.txt",
+ "cif": "D:\\Project\\PolyXRD-Tools\\PolyXRD-NCM\\ncm\\data\\cif\\NCM811.cif",
+ "engine_ours": {
+  "ok": true,
+  "a": 2.8718608225593316,
+  "b": 2.8718608225593316,
+  "c": 14.19509336325612,
+  "alpha": 90.0,
+  "beta": 90.0,
+  "gamma": 120.0,
+  "rwp": 3.1150685189606397,
+  "occ_li": 0.9868872899840708,
+  "zero_deg": 0.014511788341630137,
+  "d_nm": null
+ },
+ "engine_gsas2": {
+  "ok": true,
+  "wR": 9.375626386151128,
+  "GOF": null,
+  "n_cycles": 9,
+  "phases": [
+   {
+    "name": "NCM811",
+    "lattice": {
+     "a": 2.869763546958113,
+     "b": 2.869763546958113,
+     "c": 14.192991822472756,
+     "alpha": 90.0,
+     "beta": 90.0,
+     "gamma": 120.00000000000001
+    }
+   }
+  ],
+  "phase_fractions": [
+   100.0
+  ],
+  "wR_rietveld": 8.943911686535671,
+  "gpx": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\workbuddy-update-x64-workbuddy\\polyxrd_g2_final_pav4bp27\\proj.gpx",
+  "engine_meta": {
+   "gw_est": 26.605,
+   "seed_scale": 1.0,
+   "seed_wR": 22.542483969096384
+  }
+ },
+ "compare": {
+  "gsas2_a": 2.869763546958113,
+  "gsas2_c": 14.192991822472756,
+  "gsas2_wR": 8.943911686535671,
+  "ours_a": 2.8718608225593316,
+  "ours_c": 14.19509336325612,
+  "ours_rwp": 3.1150685189606397,
+  "da_pct": 0.07302845544408071,
+  "dc_pct": 0.014804698564394527,
+  "rwp_diff_pp": 5.828843167575031,
+  "zero_closure": {
+   "zero_deg": 0.014511788341630137,
+   "two_theta_003": 18.741123247663413,
+   "predicted_da_pct": 0.07674124613595422,
+   "observed_da_pct": 0.07302845544408071,
+   "ratio": 0.951619358834805
+  }
+ },
+ "acceptance": {
+  "da_pct_max": 0.05,
+  "dc_pct_max": 0.05,
+  "rwp_diff_pp_max": 2.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+  "sample": "D:\\Project\\XRD\\XRData\\csuHJW\\txt\\Data040：NCM：811_raw.txt",
+  "cif": "NCM811",
+  "note": "T1.4 冻结。改动需开新卡并在 docs/VALIDATION.md 记录原因。",
+  "metrics": {
+    "rwp": 3.0409,
+    "rp": 1.9787,
+    "rexp": 1.4159,
+    "gof": 2.1476,
+    "a": 2.87185,
+    "c": 14.195023,
+    "c_over_a": 4.94282,
+    "volume": 101.389,
+    "zero": 0.01416,
+    "U": 0.049614,
+    "V": -0.041837,
+    "W": 0.017551,
+    "eta": 0.6032,
+    "asym": 0.06956,
+    "bfactor": 0.5245
+  }
+}

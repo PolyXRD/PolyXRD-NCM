@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "polyxrd-ncm"
+version = "0.1.0"
+description = "三元锂电正极材料（NCM）XRD 粉末衍射精修专用工具"
+requires-python = ">=3.10"
+license = { text = "Dual: Academic / Commercial" }
+dependencies = [
+    "numpy==2.2.6",
+    "scipy==1.15.3",
+    "matplotlib==3.10.9",
+    "PySide6==6.11.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/PolyXRD"
+
+[tool.setuptools.packages.find]
+include = ["ncm*"]
+
+[tool.setuptools.package-data]
+ncm = ["data/cif/*.cif", "data/cif/impurity/*.cif", "data/*.json",
+       "resources/*", "i18n/*.py", "i18n/translations/*.py"]
+
+[tool.ruff]
+line-length = 100

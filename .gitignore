@@ -1,0 +1,44 @@
+# ── 构建产物（由 build.bat / build_exe.bat / build_setup.bat 重新生成）──
+build/
+dist/
+installer_output/
+*.spec.bak
+
+# ── 过程数据（可由测试重新生成）──
+tests/out/*
+!tests/out/.gitkeep
+.pytest_cache/
+.pytest_tmp/
+.ruff_cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+
+# ── 日志与临时件 ──
+*.log
+build*.log
+_*.png
+_*.html
+_gsas2_dl/
+_spike/
+
+# ── 工具链本地状态（会话缓存，非项目内容）──
+.workbuddy/
+
+# ── 环境 ──
+venv/
+.venv/
+env/
+
+# ── 编辑器 / 系统 ──
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ── 本地私有数据（真实谱图与个人笔记，不进仓库）──
+XRData/
+*.jsonl
