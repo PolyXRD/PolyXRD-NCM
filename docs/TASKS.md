@@ -1006,10 +1006,43 @@
 ### ③ 私有仓库与 Release
 
 - `git init` + `.gitignore`（排除 `build/ dist/ installer_output/ _spike/
-  _gsas2_dl/ .workbuddy/ __pycache__/ .pytest_cache/` 等），首次提交，
+  _gsas2_dl/ .workbuddy/ __pycache__/ .pytest_cache/` 等），首次提交
+  198 个文件（`.git` 1.7 MB，最大文件 126 KB —— 全是测试谱与小图），
   打 `v0.1.0` tag，Release 附两个产物。
-- **状态**：见下方进度表；创建远程私有仓库需要 GitHub 凭据（本机无 `gh`、
-  无 token），已向用户索取。
+
+### 验收实测
+
+| 步骤 | 命令 | 结果 |
+|---|---|---|
+| 行数约束 | `wc -l ncm/core/identify.py ncm/core/criteria.py ncm/core/calibrate.py ncm/core/pipeline.py` | ✅ 374 / 108 / 168 / 353，全部 ≤400 |
+| 全量回归 | `pytest -q` | ✅ **431 项全通过**，42 min 28 s |
+| 冒烟（源码树） | `python -m ncm.gui --smoke` | ✅ `[smoke] OK … cif=14` |
+| PyInstaller | `build_exe.bat` | ✅ 1 min 33 s，onefile **99.3 MB** |
+| 产物自带冒烟 | `dist\PolyXRD-NCM-Internal-v0.1.0.exe --smoke` | ✅ `[smoke] OK  version=PolyXRD NCM  cif=14  resources=spacegroups+R-3m` |
+| 安装包编译 | `build_setup.bat`（ISCC 6.7.3） | ✅ 25.5 s，无警告，**100.3 MB** |
+| 静默安装 | `/VERYSILENT /DIR=D:\_ncm_install_test` | ✅ exit 0；装入 1 个 exe（104 099 608 字节）+ 卸载器 |
+| 安装版冒烟 | 安装位置 exe `--smoke` | ✅ exit 0，`resources=spacegroups+R-3m` |
+| 静默卸载 | `unins000.exe /VERYSILENT` | ✅ exit 0，**目录完全移除**（本次无残留）|
+| dist 收尾 | `tidy_dist.bat` | ✅ 只剩两个交付物，0 个多余 exe |
+
+### 偏离登记
+
+1. **`pytest -q` 的退出码被沙箱污染**：431 个进度字符全为 `.`（0 个 F/E）、
+   与 `--collect-only` 的 431 项一致，但会话收尾时 pytest 清 tmp 目录
+   （68 个文件）触发 `SAFE_DELETE_BULK_CONFIRM_REQUIRED`，进程退出码变 1。
+   **判据以「进度串全为点 + 计数等于收集数」为准**，与 T8.1 / T8.4 同一
+   已知现象，不是测试失败。
+2. **`tests/test_branding.py` 两条断言随构建链改动同步更新**：
+   `build.bat` 现在只串联，PyInstaller 调用与 `--smoke` 移到
+   `build_exe.bat`；spec 的资源断言从 `"ncm/data/cif"` 改为 `"ncm/data"` +
+   `"spacegroups"`（整目录带，且把空间群表写死进判据）。判据是**变严**，
+   不是放松。
+3. **NCM 目前无注册机制**，故只出一个 `-Internal` 版 exe；安装包 payload
+   就是它（安装时改名 `PolyXRD-NCM.exe`）。家族里 DoCryst / CrySize 同属
+   这一档。
+4. **远程仓库创建需 GitHub 凭据**（本机无 `gh`、无 token），代码与 tag 已
+   本地就绪，push / Release 待用户提供认证后执行。
+
 
 
 ---
