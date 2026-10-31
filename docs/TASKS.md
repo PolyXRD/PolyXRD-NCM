@@ -1068,10 +1068,10 @@
 3. **NCM 目前无注册机制**，故只出一个 `-Internal` 版 exe；安装包 payload
    就是它（安装时改名 `PolyXRD-NCM.exe`）。家族里 DoCryst / CrySize 同属
    这一档。
-4. **远程仓库与 Release 已闭环**，但本 token 的 scopes 是
-   `gist, read:org, repo, workflow`，**没有 `delete_repo`** —— 能建库不能删库。
-   建库诊断期创建的探针仓库 `PolyXRD/pxrd-ncm-probe-52721` 无法用 API 删除，
-   需在 GitHub 网页 Settings → Danger Zone 手工删。
+4. **远程仓库与 Release 已闭环**（2026-10-30 完成，10-31 经核对完整）。
+   本 token 的 scopes 是 `gist, read:org, repo, workflow`，**没有 `delete_repo`**
+   —— 能建库不能删库。建库诊断期创建的探针仓库 `PolyXRD/pxrd-ncm-probe-52721`
+   已由于 2026-10-31 在 GitHub 网页端手工删除（API 回查 404 确认）。
 5. **GitHub 建库/建 Release 存在「假失败」**：`POST /user/repos` 与
    `POST /releases` 会返回 `500 / 502`，而资源其实已经建好了。早期实现把它当
    失败直接抛错，会误判成「没权限」。判据改为**出错后回查一次 GET**，
